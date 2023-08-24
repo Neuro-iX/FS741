@@ -1,0 +1,1 @@
+mri_cc -aseg aseg.auto_noCCseg.mgz -o aseg.auto.mgz -lta /home/bverreman/Desktop/test2_high_res/mri/transforms/cc_up.lta test2_high_res

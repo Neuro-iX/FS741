@@ -1,0 +1,94 @@
+Log file for defect2seg
+Tue Aug 22 12:43:38 EDT 2023
+
+setenv SUBJECTS_DIR /home/bverreman/Desktop
+cd /home/bverreman/Desktop/corrected_filled/scripts
+/usr/local/freesurfer/7.4.1/bin/defect2seg --s corrected_filled --cortex
+
+freesurfer-linux-ubuntu22_x86_64-7.4.1-20230614-7eb8460
+defect2seg 7.4.1
+Linux virtual-machine-pc 6.2.0-26-generic #26~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Thu Jul 13 16:27:29 UTC 2 x86_64 x86_64 x86_64 GNU/Linux
+pid 97349
+mri_label2label --label-cortex /home/bverreman/Desktop/corrected_filled/surf/lh.orig.nofix /home/bverreman/Desktop/corrected_filled/mri/aseg.presurf.mgz 0 /home/bverreman/Desktop/corrected_filled/label/lh.nofix.cortex.label
+
+ Generating cortex label... RemoveHipAmgy=0
+ NucAccIsMedialWall=0
+ mris->useRealRAS=0
+26 non-cortical segments detected
+only using segment with 15035 vertices
+erasing segment 0 (vno[0] = 66743)
+erasing segment 1 (vno[0] = 67907)
+erasing segment 3 (vno[0] = 95011)
+erasing segment 4 (vno[0] = 96634)
+erasing segment 5 (vno[0] = 122088)
+erasing segment 6 (vno[0] = 123688)
+erasing segment 7 (vno[0] = 125492)
+erasing segment 8 (vno[0] = 128981)
+erasing segment 9 (vno[0] = 166150)
+erasing segment 10 (vno[0] = 172536)
+erasing segment 11 (vno[0] = 176772)
+erasing segment 12 (vno[0] = 176922)
+erasing segment 13 (vno[0] = 176938)
+erasing segment 14 (vno[0] = 178218)
+erasing segment 15 (vno[0] = 178345)
+erasing segment 16 (vno[0] = 179539)
+erasing segment 17 (vno[0] = 180860)
+erasing segment 18 (vno[0] = 180970)
+erasing segment 19 (vno[0] = 182490)
+erasing segment 20 (vno[0] = 183259)
+erasing segment 21 (vno[0] = 183779)
+erasing segment 22 (vno[0] = 185023)
+erasing segment 23 (vno[0] = 185031)
+erasing segment 24 (vno[0] = 196559)
+erasing segment 25 (vno[0] = 214619)
+mri_label2vol --defects /home/bverreman/Desktop/corrected_filled/surf/lh.orig.nofix /home/bverreman/Desktop/corrected_filled/surf/lh.defect_labels /home/bverreman/Desktop/corrected_filled/mri/orig.mgz 1000 0 /home/bverreman/Desktop/corrected_filled/mri/surface.defects.mgz /home/bverreman/Desktop/corrected_filled/label/lh.nofix.cortex.label
+mri_label2vol supposed to be reproducible but seed not set
+Contraining to label /home/bverreman/Desktop/corrected_filled/label/lh.nofix.cortex.label
+Changing input type 0 to MRI_INT
+Converting defects to volume: offset=1000, merge=0
+Writing to /home/bverreman/Desktop/corrected_filled/mri/surface.defects.mgz
+mris_defects_pointset -s /home/bverreman/Desktop/corrected_filled/surf/lh.orig.nofix -d /home/bverreman/Desktop/corrected_filled/surf/lh.defect_labels -o /home/bverreman/Desktop/corrected_filled/surf/lh.defects.pointset --label /home/bverreman/Desktop/corrected_filled/label/lh.nofix.cortex.label
+Reading in surface /home/bverreman/Desktop/corrected_filled/surf/lh.orig.nofix
+Reading in defect segmentation /home/bverreman/Desktop/corrected_filled/surf/lh.defect_labels
+Reading in label /home/bverreman/Desktop/corrected_filled/label/lh.nofix.cortex.label
+#VMPC# mris_defects_pointset 322928
+mris_defects_pointset done
+mri_label2label --label-cortex /home/bverreman/Desktop/corrected_filled/surf/rh.orig.nofix /home/bverreman/Desktop/corrected_filled/mri/aseg.presurf.mgz 0 /home/bverreman/Desktop/corrected_filled/label/rh.nofix.cortex.label
+
+ Generating cortex label... RemoveHipAmgy=0
+ NucAccIsMedialWall=0
+ mris->useRealRAS=0
+14 non-cortical segments detected
+only using segment with 14982 vertices
+erasing segment 0 (vno[0] = 71473)
+erasing segment 1 (vno[0] = 72670)
+erasing segment 2 (vno[0] = 74087)
+erasing segment 3 (vno[0] = 79835)
+erasing segment 5 (vno[0] = 158961)
+erasing segment 6 (vno[0] = 179402)
+erasing segment 7 (vno[0] = 181004)
+erasing segment 8 (vno[0] = 181055)
+erasing segment 9 (vno[0] = 182486)
+erasing segment 10 (vno[0] = 185635)
+erasing segment 11 (vno[0] = 186940)
+erasing segment 12 (vno[0] = 187008)
+erasing segment 13 (vno[0] = 190988)
+mri_label2vol --defects /home/bverreman/Desktop/corrected_filled/surf/rh.orig.nofix /home/bverreman/Desktop/corrected_filled/surf/rh.defect_labels /home/bverreman/Desktop/corrected_filled/mri/surface.defects.mgz 2000 1 /home/bverreman/Desktop/corrected_filled/mri/surface.defects.mgz /home/bverreman/Desktop/corrected_filled/label/rh.nofix.cortex.label
+mri_label2vol supposed to be reproducible but seed not set
+Contraining to label /home/bverreman/Desktop/corrected_filled/label/rh.nofix.cortex.label
+Converting defects to volume: offset=2000, merge=1
+Writing to /home/bverreman/Desktop/corrected_filled/mri/surface.defects.mgz
+mris_defects_pointset -s /home/bverreman/Desktop/corrected_filled/surf/rh.orig.nofix -d /home/bverreman/Desktop/corrected_filled/surf/rh.defect_labels -o /home/bverreman/Desktop/corrected_filled/surf/rh.defects.pointset --label /home/bverreman/Desktop/corrected_filled/label/rh.nofix.cortex.label
+Reading in surface /home/bverreman/Desktop/corrected_filled/surf/rh.orig.nofix
+Reading in defect segmentation /home/bverreman/Desktop/corrected_filled/surf/rh.defect_labels
+Reading in label /home/bverreman/Desktop/corrected_filled/label/rh.nofix.cortex.label
+#VMPC# mris_defects_pointset 324484
+mris_defects_pointset done
+ 
+Started at Tue Aug 22 12:43:37 EDT 2023 
+Ended   at Tue Aug 22 12:44:34 EDT 2023
+Defect2seg-Run-Time-Sec 57
+Defect2seg-Run-Time-Min 1.14
+Defect2seg-Run-Time-Hours 0.02
+ 
+defect2seg Done

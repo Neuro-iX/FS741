@@ -1,0 +1,1 @@
+mri_convert /home/bverreman/Desktop/test2_high_res/mri/rawavg.mgz /home/bverreman/Desktop/test2_high_res/mri/orig.mgz --conform_min

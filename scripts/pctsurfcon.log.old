@@ -1,0 +1,9 @@
+Logfile for pctsurfcon
+Tue Aug 22 16:36:26 EDT 2023
+setenv SUBJECTS_DIR /home/bverreman/Desktop
+cd /home/bverreman/Desktop/corrected_filled/scripts
+/usr/local/freesurfer/7.4.1/bin/pctsurfcon
+pctsurfcon 7.4.1
+Linux virtual-machine-pc 6.2.0-26-generic #26~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Thu Jul 13 16:27:29 UTC 2 x86_64 x86_64 x86_64 GNU/Linux
+FREESURFER_HOME /usr/local/freesurfer/7.4.1
+Cleaning up

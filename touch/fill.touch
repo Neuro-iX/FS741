@@ -1,0 +1,1 @@
+mri_fill -a ../scripts/ponscc.cut.log -xform transforms/talairach.lta -segmentation aseg.presurf.mgz -ctab /usr/local/freesurfer/7.4.1/SubCorticalMassLUT.txt -auto-man filled.auto.mgz filled.mgz ../tmp/filled.edits.txt wm.mgz filled.mgz

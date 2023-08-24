@@ -1,0 +1,13 @@
+------------------------------
+SUBJECT corrected_filled
+START_TIME Tue Aug 22 12:13:12 EDT 2023
+END_TIME Tue Aug 22 18:20:46 EDT 2023
+RUNTIME_HOURS 6.126
+USER bverreman
+HOST virtual-machine-pc
+PROCESSOR x86_64
+OS Linux
+UNAME Linux virtual-machine-pc 6.2.0-26-generic #26~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Thu Jul 13 16:27:29 UTC 2 x86_64 x86_64 x86_64 GNU/Linux
+VERSION 7.4.1 (freesurfer-linux-ubuntu22_x86_64-7.4.1-20230614-7eb8460)
+CMDPATH /usr/local/freesurfer/7.4.1/bin/recon-all
+CMDARGS -autorecon2-wm -autorecon3 -s corrected_filled
