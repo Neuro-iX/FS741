@@ -1,0 +1,409 @@
+Logfile for bbregister
+Sun Mar 30 04:54:16 CDT 2014
+
+setenv SUBJECTS_DIR /HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451/T1w
+cd /HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451
+/export/freesurfer-5.3-HCP/bin/bbregister --s 198451 --mov /HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451/T1w/T2w_acpc_dc_restore.nii.gz --surf white.deformed --init-reg /HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451/T1w/198451/mri/transforms/eye.dat --t2 --reg /HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451/T1w/198451/mri/transforms/T2wtoT1w.dat --o /HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451/T1w/198451/mri/T2w_hires.nii.gz
+
+$Id: bbregister,v 1.49.2.3 2013/03/25 18:04:53 greve Exp $
+Linux node136 2.6.18-164.el5 #1 SMP Tue Aug 18 15:51:48 EDT 2009 x86_64 x86_64 x86_64 GNU/Linux
+FREESURFER_HOME /export/freesurfer-5.3-HCP
+mri_convert /HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451/T1w/T2w_acpc_dc_restore.nii.gz /HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451/T1w/198451/mri/transforms/tmp.bbregister.30118/template.nii
+mri_convert /HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451/T1w/T2w_acpc_dc_restore.nii.gz /HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451/T1w/198451/mri/transforms/tmp.bbregister.30118/template.nii 
+$Id: mri_convert.c,v 1.179.2.7 2012/09/05 21:55:16 mreuter Exp $
+reading from /HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451/T1w/T2w_acpc_dc_restore.nii.gz...
+TR=3200.00, TE=0.00, TI=0.00, flip angle=0.00
+i_ras = (-1, 0, 0)
+j_ras = (0, 1, 0)
+k_ras = (0, 0, 1)
+writing to /HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451/T1w/198451/mri/transforms/tmp.bbregister.30118/template.nii...
+mri_segreg --mov /HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451/T1w/198451/mri/transforms/tmp.bbregister.30118/template.nii --init-reg /HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451/T1w/198451/mri/transforms/eye.dat --out-reg /HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451/T1w/198451/mri/transforms/tmp.bbregister.30118/bbr.pass1.dat --subsamp-brute 100 --subsamp 100 --tol 1e-4 --tol1d 1e-3 --brute -4 4 4 --surf white.deformed --gm-proj-frac 0.5 --gm-gt-wm 0.5
+$Id: mri_segreg.c,v 1.103.2.1 2011/10/07 19:14:42 greve Exp $
+setenv SUBJECTS_DIR /HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451/T1w
+cd /HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451
+mri_segreg --mov /HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451/T1w/198451/mri/transforms/tmp.bbregister.30118/template.nii --init-reg /HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451/T1w/198451/mri/transforms/eye.dat --out-reg /HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451/T1w/198451/mri/transforms/tmp.bbregister.30118/bbr.pass1.dat --subsamp-brute 100 --subsamp 100 --tol 1e-4 --tol1d 1e-3 --brute -4 4 4 --surf white.deformed --gm-proj-frac 0.5 --gm-gt-wm 0.5 
+sysname  Linux
+hostname node136
+machine  x86_64
+user     HCPpipeline
+movvol /HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451/T1w/198451/mri/transforms/tmp.bbregister.30118/template.nii
+regfile /HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451/T1w/198451/mri/transforms/eye.dat
+subject 198451
+dof 6
+outregfile /HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451/T1w/198451/mri/transforms/tmp.bbregister.30118/bbr.pass1.dat
+UseMask 0
+UseLH 1
+UseRH 1
+nsubsamp 100
+PenaltySign  -1
+PenaltySlope 0.500000
+PenaltyCenter 0.000000
+surfname white.deformed
+GMProjFrac 0.500000
+WMProjAbs 2.000000
+lhcostfile (null)
+rhcostfile (null)
+interp  trilinear (1)
+frame  0
+TolPowell 0.000100
+nMaxItersPowell 36
+n1dmin  3
+Profile   0
+Gdiag_no  -1
+AddNoise  0 (0)
+SynthSeed 1397028821
+TransRandMax 0.000000
+RotRandMax 0.000000
+Translations 0.000000 0.000000 0.000000
+Rotations   0.000000 0.000000 0.000000
+Input reg
+ 1.000   0.000   0.000   0.000;
+ 0.000   1.000   0.000   0.000;
+ 0.000   0.000   1.000   0.000;
+ 0.000   0.000   0.000   1.000;
+
+Loading mov
+Projecting LH Surfs
+Loading lh.white.deformed surf
+Loading lh.thickness for GM
+GM Proj: 1 0.500000 2.000000
+WM Proj: 0 0.500000 2.000000
+Projecting RH Surfs
+Loading rh.white.deformed surf
+Loading rh.thickness
+Projecting RH Surfs
+Computing relative cost
+ 0  -25.0 -25.0 -25.0   1.000489
+ 1  -25.0 -25.0  25.0   0.982530
+ 2  -25.0  25.0 -25.0   0.935780
+ 3  -25.0  25.0  25.0   1.007398
+ 4   25.0 -25.0 -25.0   0.990856
+ 5   25.0 -25.0  25.0   0.968195
+ 6   25.0  25.0 -25.0   0.992162
+ 7   25.0  25.0  25.0   0.985933
+REL:  8  0.085216    7.863344  0.982918 rel = 0.0866972 
+Initial costs ----------------
+Number of surface hits 3127
+WM  Intensity   289.5749 +/-  50.1246
+Ctx Intensity   389.7887 +/-  31.2370
+Pct Contrast     30.3475 +/-  17.6138
+Cost   0.0852
+RelCost   0.0867
+
+------------------------------------
+Brute force preopt -4 4 4, n = 729
+     0  -4.0000  -4.0000  -4.0000  -4.0000  -4.0000  -4.0000      0.9710   0.9710  0.0
+     2  -4.0000  -4.0000  -4.0000  -4.0000  -4.0000   4.0000      0.9393   0.9393  0.0
+     7  -4.0000  -4.0000  -4.0000  -4.0000   4.0000   0.0000      0.8943   0.8943  0.0
+    11  -4.0000  -4.0000  -4.0000   0.0000  -4.0000   4.0000      0.8780   0.8780  0.0
+    33  -4.0000  -4.0000   0.0000  -4.0000   4.0000  -4.0000      0.8706   0.8706  0.0
+    45  -4.0000  -4.0000   0.0000   4.0000  -4.0000  -4.0000      0.8671   0.8671  0.0
+    46  -4.0000  -4.0000   0.0000   4.0000  -4.0000   0.0000      0.8490   0.8490  0.0
+   118  -4.0000   0.0000   0.0000   0.0000  -4.0000   0.0000      0.8082   0.8082  0.0
+   123  -4.0000   0.0000   0.0000   0.0000   4.0000  -4.0000      0.8067   0.8067  0.0
+   274   0.0000  -4.0000   0.0000  -4.0000   0.0000   0.0000      0.7598   0.7598  0.0
+   355   0.0000   0.0000   0.0000  -4.0000   0.0000   0.0000      0.6855   0.6855  0.0
+   363   0.0000   0.0000   0.0000   0.0000   0.0000  -4.0000      0.6019   0.6019  0.0
+   364   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000      0.0852   0.0852  0.0
+Brute Force --------------------------
+Min cost was 0.085216
+Number of iterations   729
+Search time 2.980000 sec
+Parameters at best (transmm, rotdeg)
+  0.000   0.000   0.000  0.000  0.000  0.000 
+--------------------------------------------
+
+Starting Powell Minimization
+Init Powel Params dof = 6
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+   9 -0.004  0.000  0.000  0.000  0.000  0.000   0.0852141768
+  10 -0.003  0.000  0.000  0.000  0.000  0.000   0.0852139005
+  18 -0.003  0.158  0.000  0.000  0.000  0.000   0.0826295118
+  19 -0.003  0.157  0.000  0.000  0.000  0.000   0.0826294513
+  26 -0.003  0.157  0.382  0.000  0.000  0.000   0.0807221892
+  27 -0.003  0.157  0.214  0.000  0.000  0.000   0.0786982458
+  29 -0.003  0.157  0.132  0.000  0.000  0.000   0.0778926989
+  30 -0.003  0.157  0.153  0.000  0.000  0.000   0.0778307687
+  31 -0.003  0.157  0.150  0.000  0.000  0.000   0.0778293529
+  40 -0.003  0.157  0.150 -0.084  0.000  0.000   0.0758211052
+  42 -0.003  0.157  0.150 -0.086  0.000  0.000   0.0757973240
+  43 -0.003  0.157  0.150 -0.096  0.000  0.000   0.0757806357
+  45 -0.003  0.157  0.150 -0.093  0.000  0.000   0.0757770003
+  46 -0.003  0.157  0.150 -0.094  0.000  0.000   0.0757766602
+  63 -0.003  0.157  0.150 -0.094  0.000 -0.090   0.0731647666
+  65 -0.003  0.157  0.150 -0.094  0.000 -0.154   0.0723555298
+  67 -0.003  0.157  0.150 -0.094  0.000 -0.147   0.0723455066
+  68 -0.003  0.157  0.150 -0.094  0.000 -0.148   0.0723446690
+  83 -0.000  0.157  0.150 -0.094  0.000 -0.148   0.0723372696
+  94 -0.000  0.175  0.150 -0.094  0.000 -0.148   0.0721349045
+ 104 -0.000  0.175  0.165 -0.094  0.000 -0.148   0.0720791982
+ 106 -0.000  0.175  0.161 -0.094  0.000 -0.148   0.0720737296
+ 117 -0.000  0.175  0.161 -0.096  0.000 -0.148   0.0720715121
+ 126 -0.000  0.175  0.161 -0.096 -0.012 -0.148   0.0720071110
+ 128 -0.000  0.175  0.161 -0.096 -0.010 -0.148   0.0720041574
+ 129 -0.000  0.175  0.161 -0.096 -0.009 -0.148   0.0720040503
+ 137 -0.000  0.175  0.161 -0.096 -0.009 -0.143   0.0719748253
+ 139 -0.000  0.175  0.161 -0.096 -0.009 -0.135   0.0719555912
+ 141 -0.000  0.175  0.161 -0.096 -0.009 -0.134   0.0719555126
+ 167 -0.000  0.176  0.161 -0.096 -0.009 -0.134   0.0719528476
+ 168 -0.000  0.178  0.161 -0.096 -0.009 -0.134   0.0719520202
+ 179 -0.000  0.178  0.163 -0.096 -0.009 -0.134   0.0719498478
+ 180 -0.000  0.178  0.164 -0.096 -0.009 -0.134   0.0719497485
+ 188 -0.000  0.178  0.164 -0.094 -0.009 -0.134   0.0719484106
+ 189 -0.000  0.178  0.164 -0.093 -0.009 -0.134   0.0719479122
+ 196 -0.000  0.178  0.164 -0.093 -0.014 -0.134   0.0719430922
+ 198 -0.000  0.178  0.164 -0.093 -0.012 -0.134   0.0719412438
+ 208 -0.000  0.178  0.164 -0.093 -0.012 -0.135   0.0719406405
+ 209 -0.000  0.178  0.164 -0.093 -0.012 -0.136   0.0719405960
+ 224  0.001  0.178  0.164 -0.093 -0.012 -0.136   0.0719401379
+ 236  0.001  0.179  0.164 -0.093 -0.012 -0.136   0.0719395755
+ 246  0.001  0.179  0.163 -0.093 -0.012 -0.136   0.0719392889
+ 256  0.001  0.179  0.163 -0.094 -0.012 -0.136   0.0719388870
+ 263  0.001  0.179  0.163 -0.094 -0.015 -0.136   0.0719347812
+ 265  0.001  0.179  0.163 -0.094 -0.014 -0.136   0.0719345509
+Powell done niters = 3
+Computing relative cost
+ 0  -25.0 -25.0 -25.0   0.985515
+ 1  -25.0 -25.0  25.0   0.978178
+ 2  -25.0  25.0 -25.0   0.934941
+ 3  -25.0  25.0  25.0   1.017733
+ 4   25.0 -25.0 -25.0   1.003093
+ 5   25.0 -25.0  25.0   0.964602
+ 6   25.0  25.0 -25.0   0.992008
+ 7   25.0  25.0  25.0   0.988090
+REL:  8  0.071935    7.864160  0.983020 rel = 0.0731771 
+Number of iterations     3
+Min cost was 0.071935
+Number of FunctionCalls   276
+TolPowell 0.000100
+nMaxItersPowell 36
+OptimizationTime 1.145000 sec
+Parameters at optimum (transmm)  0.00121  0.17922  0.16260
+Parameters at optimum (rotdeg) -0.09398 -0.01387 -0.13570 
+Final costs ----------------
+Number of surface hits 3127
+WM  Intensity   289.5303 +/-  50.2259
+Ctx Intensity   390.2851 +/-  31.0199
+Pct Contrast     30.4961 +/-  17.6200
+Cost   0.0719
+RelCost   0.0867
+Reg at min cost was 
+ 1.000   0.002  -0.000   0.001;
+-0.002   1.000   0.002   0.179;
+ 0.000  -0.002   1.000   0.163;
+ 0.000   0.000   0.000   1.000;
+
+Writing optimal reg to /HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451/T1w/198451/mri/transforms/tmp.bbregister.30118/bbr.pass1.dat, type = 14 
+Original Reg 
+ 1.000   0.000   0.000   0.000;
+ 0.000   1.000   0.000   0.000;
+ 0.000   0.000   1.000   0.000;
+ 0.000   0.000   0.000   1.000;
+
+Original Reg - Optimal Reg
+ 0.000  -0.002   0.000  -0.001;
+ 0.002   0.000  -0.002  -0.179;
+-0.000   0.002   0.000  -0.163;
+ 0.000   0.000   0.000   0.000;
+
+Computing change in lh position
+LH rmsDiffMean 0.315980
+Computing change in rh position
+Surface RMS Diff (mm) 0.274199 0.443648
+mri_segreg done
+mri_segreg --mov /HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451/T1w/198451/mri/transforms/tmp.bbregister.30118/template.nii --init-reg /HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451/T1w/198451/mri/transforms/tmp.bbregister.30118/bbr.pass1.dat --out-reg /HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451/T1w/198451/mri/transforms/T2wtoT1w.dat --brute -0.1 0.1 0.1 --interp trilinear --wm-proj-abs 2 --tol 1e-8 --tol1d 1e-3 --c0 0 --mincost /HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451/T1w/198451/mri/transforms/T2wtoT1w.dat.mincost --dof 6 --nmax 36 --param /HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451/T1w/198451/mri/transforms/T2wtoT1w.dat.param --surf white.deformed --cur-reg /HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451/T1w/198451/mri/transforms/tmp.bbregister.30118/reg.curopt.dat --gm-proj-frac 0.5 --nsub 1 --o /HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451/T1w/198451/mri/T2w_hires.nii.gz --gm-gt-wm 0.5
+$Id: mri_segreg.c,v 1.103.2.1 2011/10/07 19:14:42 greve Exp $
+setenv SUBJECTS_DIR /HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451/T1w
+cd /HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451
+mri_segreg --mov /HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451/T1w/198451/mri/transforms/tmp.bbregister.30118/template.nii --init-reg /HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451/T1w/198451/mri/transforms/tmp.bbregister.30118/bbr.pass1.dat --out-reg /HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451/T1w/198451/mri/transforms/T2wtoT1w.dat --brute -0.1 0.1 0.1 --interp trilinear --wm-proj-abs 2 --tol 1e-8 --tol1d 1e-3 --c0 0 --mincost /HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451/T1w/198451/mri/transforms/T2wtoT1w.dat.mincost --dof 6 --nmax 36 --param /HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451/T1w/198451/mri/transforms/T2wtoT1w.dat.param --surf white.deformed --cur-reg /HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451/T1w/198451/mri/transforms/tmp.bbregister.30118/reg.curopt.dat --gm-proj-frac 0.5 --nsub 1 --o /HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451/T1w/198451/mri/T2w_hires.nii.gz --gm-gt-wm 0.5 
+sysname  Linux
+hostname node136
+machine  x86_64
+user     HCPpipeline
+movvol /HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451/T1w/198451/mri/transforms/tmp.bbregister.30118/template.nii
+regfile /HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451/T1w/198451/mri/transforms/tmp.bbregister.30118/bbr.pass1.dat
+subject 198451
+dof 6
+outregfile /HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451/T1w/198451/mri/transforms/T2wtoT1w.dat
+outfile /HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451/T1w/198451/mri/T2w_hires.nii.gz
+UseMask 0
+UseLH 1
+UseRH 1
+nsubsamp 1
+PenaltySign  -1
+PenaltySlope 0.500000
+PenaltyCenter 0.000000
+surfname white.deformed
+GMProjFrac 0.500000
+WMProjAbs 2.000000
+lhcostfile (null)
+rhcostfile (null)
+interp  trilinear (1)
+frame  0
+TolPowell 0.000000
+nMaxItersPowell 36
+n1dmin  3
+Profile   0
+Gdiag_no  -1
+AddNoise  0 (0)
+SynthSeed 1397093025
+TransRandMax 0.000000
+RotRandMax 0.000000
+Translations 0.000000 0.000000 0.000000
+Rotations   0.000000 0.000000 0.000000
+Input reg
+ 1.000   0.002  -0.000   0.001;
+-0.002   1.000   0.002   0.179;
+ 0.000  -0.002   1.000   0.163;
+ 0.000   0.000   0.000   1.000;
+
+Loading mov
+Projecting LH Surfs
+Loading lh.white.deformed surf
+Loading lh.thickness for GM
+GM Proj: 1 0.500000 2.000000
+WM Proj: 0 0.500000 2.000000
+Projecting RH Surfs
+Loading rh.white.deformed surf
+Loading rh.thickness
+Projecting RH Surfs
+Computing relative cost
+ 0  -25.0 -25.0 -25.0   1.004392
+ 1  -25.0 -25.0  25.0   0.995860
+ 2  -25.0  25.0 -25.0   0.985225
+ 3  -25.0  25.0  25.0   0.999341
+ 4   25.0 -25.0 -25.0   0.983594
+ 5   25.0 -25.0  25.0   0.994491
+ 6   25.0  25.0 -25.0   0.992475
+ 7   25.0  25.0  25.0   0.992206
+REL:  8  0.071083    7.947583  0.993448 rel = 0.0715519 
+Initial costs ----------------
+Number of surface hits 312028
+WM  Intensity   289.3172 +/-  51.7583
+Ctx Intensity   390.4540 +/-  31.1165
+Pct Contrast     30.6535 +/-  17.7708
+Cost   0.0711
+RelCost   0.0716
+
+------------------------------------
+Brute force preopt -0.1 0.1 0.1, n = 729
+     0  -0.1000  -0.1000  -0.1000  -0.1000  -0.1000  -0.1000      0.0830   0.0830  0.0
+     1  -0.1000  -0.1000  -0.1000  -0.1000  -0.1000   0.0000      0.0822   0.0822  0.0
+     3  -0.1000  -0.1000  -0.1000  -0.1000   0.0000  -0.1000      0.0784   0.0784  0.0
+     4  -0.1000  -0.1000  -0.1000  -0.1000   0.0000   0.0000      0.0774   0.0774  0.0
+    12  -0.1000  -0.1000  -0.1000   0.0000   0.0000  -0.1000      0.0773   0.0773  0.0
+    13  -0.1000  -0.1000  -0.1000   0.0000   0.0000   0.0000      0.0769   0.0769  0.0
+    30  -0.1000  -0.1000   0.0000  -0.1000   0.0000  -0.1000      0.0769   0.0769  0.0
+    31  -0.1000  -0.1000   0.0000  -0.1000   0.0000   0.0000      0.0761   0.0761  0.0
+    34  -0.1000  -0.1000   0.0000  -0.1000   0.1000   0.0000      0.0755   0.0755  0.0
+    40  -0.1000  -0.1000   0.0000   0.0000   0.0000   0.0000      0.0752   0.0752  0.0
+    43  -0.1000  -0.1000   0.0000   0.0000   0.1000   0.0000      0.0748   0.0748  0.0
+    49  -0.1000  -0.1000   0.0000   0.1000   0.0000   0.0000      0.0746   0.0746  0.0
+    68  -0.1000  -0.1000   0.1000   0.0000   0.0000   0.1000      0.0744   0.0744  0.0
+   121  -0.1000   0.0000   0.0000   0.0000   0.0000   0.0000      0.0729   0.0729  0.0
+   364   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000      0.0719   0.0719  0.0
+Brute Force --------------------------
+Min cost was 0.071935
+Number of iterations   729
+Search time 2.967000 sec
+Parameters at best (transmm, rotdeg)
+  0.000   0.000   0.000  0.000  0.000  0.000 
+--------------------------------------------
+
+Starting Powell Minimization
+Init Powel Params dof = 6
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+   7 -0.053  0.000  0.000  0.000  0.000  0.000   0.0708929344
+   8 -0.042  0.000  0.000  0.000  0.000  0.000   0.0708796967
+   9 -0.043  0.000  0.000  0.000  0.000  0.000   0.0708796412
+  17 -0.043 -0.093  0.000  0.000  0.000  0.000   0.0699123444
+  18 -0.043 -0.081  0.000  0.000  0.000  0.000   0.0698891936
+  19 -0.043 -0.080  0.000  0.000  0.000  0.000   0.0698891148
+  27 -0.043 -0.080  0.055  0.000  0.000  0.000   0.0695876219
+  29 -0.043 -0.080  0.053  0.000  0.000  0.000   0.0695875092
+  37 -0.043 -0.080  0.053  0.021  0.000  0.000   0.0695372464
+  46 -0.043 -0.080  0.053  0.021  0.047  0.000   0.0692366614
+  47 -0.043 -0.080  0.053  0.021  0.048  0.000   0.0692363529
+  48 -0.043 -0.080  0.053  0.021  0.049  0.000   0.0692362623
+  57 -0.043 -0.080  0.053  0.021  0.049  0.083   0.0685901746
+  58 -0.043 -0.080  0.053  0.021  0.049  0.087   0.0685857516
+  59 -0.043 -0.080  0.053  0.021  0.049  0.092   0.0685839473
+  69 -0.076 -0.080  0.053  0.021  0.049  0.092   0.0684434582
+  70 -0.079 -0.080  0.053  0.021  0.049  0.092   0.0684426954
+  80 -0.079 -0.078  0.053  0.021  0.049  0.092   0.0684417947
+  81 -0.079 -0.077  0.053  0.021  0.049  0.092   0.0684416213
+  98 -0.079 -0.077  0.053  0.007  0.049  0.092   0.0684234067
+ 100 -0.079 -0.077  0.053  0.010  0.049  0.092   0.0684220750
+ 109 -0.079 -0.077  0.053  0.010  0.050  0.092   0.0684195505
+ 110 -0.079 -0.077  0.053  0.010  0.058  0.092   0.0684106466
+ 121 -0.079 -0.077  0.053  0.010  0.058  0.097   0.0684085156
+Powell done niters = 2
+Computing relative cost
+ 0  -25.0 -25.0 -25.0   1.004483
+ 1  -25.0 -25.0  25.0   0.995489
+ 2  -25.0  25.0 -25.0   0.985381
+ 3  -25.0  25.0  25.0   0.998611
+ 4   25.0 -25.0 -25.0   0.982410
+ 5   25.0 -25.0  25.0   0.993584
+ 6   25.0  25.0 -25.0   0.992049
+ 7   25.0  25.0  25.0   0.992345
+REL:  8  0.068409    7.944352  0.993044 rel = 0.0688877 
+Number of iterations     2
+Min cost was 0.068409
+Number of FunctionCalls   180
+TolPowell 0.000000
+nMaxItersPowell 36
+OptimizationTime 21.871000 sec
+Parameters at optimum (transmm) -0.07902 -0.07714  0.05438
+Parameters at optimum (rotdeg)  0.00978  0.05818  0.09664 
+Final costs ----------------
+Number of surface hits 312028
+WM  Intensity   289.1041 +/-  51.4634
+Ctx Intensity   390.3899 +/-  30.9979
+Pct Contrast     30.6997 +/-  17.6852
+Cost   0.0684
+RelCost   0.0716
+Reg at min cost was 
+ 1.000   0.001   0.001  -0.078;
+-0.001   1.000   0.001   0.102;
+-0.001  -0.001   1.000   0.217;
+ 0.000   0.000   0.000   1.000;
+
+Writing optimal reg to /HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451/T1w/198451/mri/transforms/T2wtoT1w.dat, type = 14 
+Writing output volume to /HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451/T1w/198451/mri/T2w_hires.nii.gz 
+Original Reg 
+ 1.000   0.002  -0.000   0.001;
+-0.002   1.000   0.002   0.179;
+ 0.000  -0.002   1.000   0.163;
+ 0.000   0.000   0.000   1.000;
+
+Original Reg - Optimal Reg
+-0.000   0.002  -0.001   0.079;
+-0.002  -0.000   0.000   0.077;
+ 0.001  -0.000   0.000  -0.054;
+ 0.000   0.000   0.000   0.000;
+
+Computing change in lh position
+LH rmsDiffMean 0.171761
+Computing change in rh position
+Surface RMS Diff (mm) 0.130780 0.231981
+mri_segreg done
+Cleaning up
+ 
+Started at Sun Mar 30 04:54:16 CDT 2014 
+Ended   at Sun Mar 30 04:55:12 CDT 2014
+BBR-Run-Time-Sec 56
+ 
+bbregister Done
+To check results, run:
+tkregister2 --mov /HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451/T1w/T2w_acpc_dc_restore.nii.gz --reg /HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451/T1w/198451/mri/transforms/T2wtoT1w.dat --surf

@@ -1,0 +1,1 @@
+mris_register -curv ../surf/rh.sphere /export/freesurfer-5.3-HCP/average/rh.average.curvature.filled.buckner40.tif ../surf/rh.sphere.reg

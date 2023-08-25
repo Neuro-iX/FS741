@@ -1,0 +1,105 @@
+$Id: mri_segreg.c,v 1.103.2.1 2011/10/07 19:14:42 greve Exp $
+setenv SUBJECTS_DIR /HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451/T1w
+cd /HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451
+mri_segreg --mov /HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451/T1w/198451/mri/transforms/tmp.bbregister.30118/template.nii --init-reg /HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451/T1w/198451/mri/transforms/tmp.bbregister.30118/bbr.pass1.dat --out-reg /HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451/T1w/198451/mri/transforms/T2wtoT1w.dat --brute -0.1 0.1 0.1 --interp trilinear --wm-proj-abs 2 --tol 1e-8 --tol1d 1e-3 --c0 0 --mincost /HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451/T1w/198451/mri/transforms/T2wtoT1w.dat.mincost --dof 6 --nmax 36 --param /HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451/T1w/198451/mri/transforms/T2wtoT1w.dat.param --surf white.deformed --cur-reg /HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451/T1w/198451/mri/transforms/tmp.bbregister.30118/reg.curopt.dat --gm-proj-frac 0.5 --nsub 1 --o /HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451/T1w/198451/mri/T2w_hires.nii.gz --gm-gt-wm 0.5 
+sysname  Linux
+hostname node136
+machine  x86_64
+user     HCPpipeline
+movvol /HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451/T1w/198451/mri/transforms/tmp.bbregister.30118/template.nii
+regfile /HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451/T1w/198451/mri/transforms/tmp.bbregister.30118/bbr.pass1.dat
+subject 198451
+dof 6
+outregfile /HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451/T1w/198451/mri/transforms/T2wtoT1w.dat
+outfile /HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451/T1w/198451/mri/T2w_hires.nii.gz
+UseMask 0
+UseLH 1
+UseRH 1
+nsubsamp 1
+PenaltySign  -1
+PenaltySlope 0.500000
+PenaltyCenter 0.000000
+surfname white.deformed
+GMProjFrac 0.500000
+WMProjAbs 2.000000
+lhcostfile (null)
+rhcostfile (null)
+interp  trilinear (1)
+frame  0
+TolPowell 0.000000
+nMaxItersPowell 36
+n1dmin  3
+Profile   0
+Gdiag_no  -1
+AddNoise  0 (0)
+SynthSeed 1397093025
+TransRandMax 0.000000
+RotRandMax 0.000000
+Translations 0.000000 0.000000 0.000000
+Rotations   0.000000 0.000000 0.000000
+Input reg
+ 1.000   0.002  -0.000   0.001;
+-0.002   1.000   0.002   0.179;
+ 0.000  -0.002   1.000   0.163;
+ 0.000   0.000   0.000   1.000;
+
+Initial costs ----------------
+Number of surface hits 312028
+WM  Intensity0   289.3172 +/-  51.7583
+Ctx Intensity0   390.4540 +/-  31.1165
+Pct Contrast0     30.6535 +/-  17.7708
+Cost   0.0711
+RelCost   0.0716
+
+Brute force preopt -0.1 0.1 0.1, n = 729
+     0  -0.1000  -0.1000  -0.1000  -0.1000  -0.1000  -0.1000      0.0830   0.0830  0.0
+     1  -0.1000  -0.1000  -0.1000  -0.1000  -0.1000   0.0000      0.0822   0.0822  0.0
+     3  -0.1000  -0.1000  -0.1000  -0.1000   0.0000  -0.1000      0.0784   0.0784  0.0
+     4  -0.1000  -0.1000  -0.1000  -0.1000   0.0000   0.0000      0.0774   0.0774  0.0
+    12  -0.1000  -0.1000  -0.1000   0.0000   0.0000  -0.1000      0.0773   0.0773  0.0
+    13  -0.1000  -0.1000  -0.1000   0.0000   0.0000   0.0000      0.0769   0.0769  0.0
+    30  -0.1000  -0.1000   0.0000  -0.1000   0.0000  -0.1000      0.0769   0.0769  0.0
+    31  -0.1000  -0.1000   0.0000  -0.1000   0.0000   0.0000      0.0761   0.0761  0.0
+    34  -0.1000  -0.1000   0.0000  -0.1000   0.1000   0.0000      0.0755   0.0755  0.0
+    40  -0.1000  -0.1000   0.0000   0.0000   0.0000   0.0000      0.0752   0.0752  0.0
+    43  -0.1000  -0.1000   0.0000   0.0000   0.1000   0.0000      0.0748   0.0748  0.0
+    49  -0.1000  -0.1000   0.0000   0.1000   0.0000   0.0000      0.0746   0.0746  0.0
+    68  -0.1000  -0.1000   0.1000   0.0000   0.0000   0.1000      0.0744   0.0744  0.0
+   121  -0.1000   0.0000   0.0000   0.0000   0.0000   0.0000      0.0729   0.0729  0.0
+   364   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000      0.0719   0.0719  0.0
+
+Final costs ----------------
+Number of surface hits 312028
+WM  Intensity0   289.1041 +/-  51.4634
+Ctx Intensity0   390.3899 +/-  30.9979
+Pct Contrast0     30.6997 +/-  17.6852
+Cost   0.0684
+RelCost   0.0716
+Number of iterations     2
+Min cost was 0.068409
+RelMinCost   0.0689
+Number of FunctionCalls   180
+OptimizationTime 21.871000 sec
+Parameters at optimum (transmm, rotdeg)
+-0.07902 -0.07714  0.05438  0.00978  0.05818  0.09664 
+Number of surface hits 312028
+WM  Intensity   289.1041 +/-  51.4634
+Ctx Intensity   390.3899 +/-  30.9979
+Pct Contrast     30.6997 +/-  17.6852
+Cost at optimum   0.0684
+RelCostOptimum   0.0689
+nhits= 312028 wmmn=  289.1041 wmstd= 51.4634 constd=   17.6852 ctxmn=  390.3899 ctxstd= 30.9979 conmn =  30.6997 costmn =   0.0684 
+#C#  -0.079  -0.077   0.054  0.010  0.058  0.097 0.000000 0.000000 0.068409 289.104128 390.389889 30.699728 0.000000 0.500000     1 0
+Reg at min cost was 
+ 1.000   0.001   0.001  -0.078;
+-0.001   1.000   0.001   0.102;
+-0.001  -0.001   1.000   0.217;
+ 0.000   0.000   0.000   1.000;
+
+Original Reg - Optimal Reg
+-0.000   0.002  -0.001   0.079;
+-0.002  -0.000   0.000   0.077;
+ 0.001  -0.000   0.000  -0.054;
+ 0.000   0.000   0.000   0.000;
+
+Surface RMS Diff (mm) 0.130780 0.231981

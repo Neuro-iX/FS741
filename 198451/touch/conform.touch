@@ -1,0 +1,1 @@
+mri_convert /HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451/T1w/198451/mri/rawavg.mgz /HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451/T1w/198451/mri/orig.mgz --conform

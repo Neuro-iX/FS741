@@ -1,0 +1,64 @@
+# Table of FreeSurfer cortical parcellation anatomical statistics 
+# 
+# CreationTime 2014/03/30-16:19:03-GMT
+# generating_program mris_anatomical_stats
+# cvs_version $Id: mris_anatomical_stats.c,v 1.72 2011/03/02 00:04:26 nicks Exp $
+# mrisurf.c-cvs_version $Id: mrisurf.c,v 1.693.2.7 2013/05/12 22:28:01 nicks Exp $
+# cmdline mris_anatomical_stats -mgz -f ../stats/lh.BA.thresh.stats -b -a ./lh.BA.thresh.annot -c ./BA.thresh.ctab 198451 lh white 
+# sysname  Linux
+# hostname node136
+# machine  x86_64
+# user     HCPpipeline
+# 
+# SUBJECTS_DIR /HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451/T1w
+# anatomy_type surface
+# subjectname 198451
+# hemi lh
+# AnnotationFile ./lh.BA.thresh.annot
+# AnnotationFileTimeStamp 2014/03/30 11:18:53
+# Measure Cortex, NumVert, Number of Vertices, 164000, unitless
+# Measure Cortex, WhiteSurfArea, White Surface Total Area, 106353, mm^2
+# NTableCols 10
+# TableCol  1 ColHeader StructName
+# TableCol  1 FieldName Structure Name
+# TableCol  1 Units     NA
+# TableCol  2 ColHeader NumVert
+# TableCol  2 FieldName Number of Vertices
+# TableCol  2 Units     unitless
+# TableCol  3 ColHeader SurfArea
+# TableCol  3 FieldName Surface Area
+# TableCol  3 Units     mm^2
+# TableCol  4 ColHeader GrayVol
+# TableCol  4 FieldName Gray Matter Volume
+# TableCol  4 Units     mm^3
+# TableCol  5 ColHeader ThickAvg 
+# TableCol  5 FieldName Average Thickness
+# TableCol  5 Units     mm
+# TableCol  6 ColHeader ThickStd
+# TableCol  6 FieldName Thickness StdDev
+# TableCol  6 Units     mm 
+# TableCol  7 ColHeader MeanCurv
+# TableCol  7 FieldName Integrated Rectified Mean Curvature
+# TableCol  7 Units     mm^-1
+# TableCol  8 ColHeader GausCurv 
+# TableCol  8 FieldName Integrated Rectified Gaussian Curvature
+# TableCol  8 Units     mm^-2
+# TableCol  9 ColHeader  FoldInd
+# TableCol  9 FieldName  Folding Index 
+# TableCol  9 Units      unitless 
+# TableCol 10 ColHeader CurvInd
+# TableCol 10 FieldName Intrinsic Curvature Index
+# TableCol 10 Units     unitless
+# ColHeaders StructName NumVert SurfArea GrayVol ThickAvg ThickStd MeanCurv GausCurv FoldInd CurvInd
+BA1                                       952    419   1347  2.293 0.341     0.139     0.048       22     2.0
+BA2                                      1589   1029   2817  2.431 0.369     0.123     0.034       19     2.2
+BA3a                                      913    658    880  1.849 0.364     0.160     0.050       11     2.0
+BA3b                                     1957   1221   2385  1.840 0.400     0.126     0.039       23     3.1
+BA4a                                     2054   1061   3884  2.979 0.375     0.113     0.053       54     5.8
+BA4p                                     1304    848   2220  2.689 0.423     0.121     0.038       12     2.0
+BA6                                      6904   4054  13609  2.794 0.474     0.128     0.047      123    14.9
+BA44                                     1799   1210   4218  2.948 0.450     0.167     0.065       42     5.1
+BA45                                     1361    880   3069  2.700 0.467     0.159     0.054       30     3.0
+V1                                       4995   2886   6367  2.070 0.520     0.154     0.094      187    20.7
+V2                                       5051   3041   7257  2.108 0.500     0.166     0.073      106    15.5
+MT                                        581    423    986  2.415 0.350     0.133     0.058        6     0.8

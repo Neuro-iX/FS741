@@ -1,0 +1,172 @@
+/HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451/T1w/198451/mri
+/export/freesurfer-5.3-HCP/bin/mri_nu_correct.mni
+--i orig.mgz --o nu.mgz --uchar transforms/talairach.xfm --n 2
+nIters 2
+$Id: mri_nu_correct.mni,v 1.18.2.1 2013/01/09 21:23:42 nicks Exp $
+Linux node136 2.6.18-164.el5 #1 SMP Tue Aug 18 15:51:48 EDT 2009 x86_64 x86_64 x86_64 GNU/Linux
+Sat Mar 29 19:15:05 CDT 2014
+Program nu_correct, built from:
+Package MNI N3, version 1.10, compiled by nicks@minerva (x86_64-unknown-linux-gnu) on 2010-02-20 at 17:32:37
+tmpdir is ./tmp.mri_nu_correct.mni.27383
+/HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451/T1w/198451/mri
+mri_convert orig.mgz ./tmp.mri_nu_correct.mni.27383/nu0.mnc -odt float
+mri_convert orig.mgz ./tmp.mri_nu_correct.mni.27383/nu0.mnc -odt float 
+$Id: mri_convert.c,v 1.179.2.7 2012/09/05 21:55:16 mreuter Exp $
+reading from orig.mgz...
+TR=2400.00, TE=0.00, TI=0.00, flip angle=0.00
+i_ras = (-1, 0, 0)
+j_ras = (0, 0, -1)
+k_ras = (0, 1, 0)
+changing data type from uchar to float (noscale = 0)...
+writing to ./tmp.mri_nu_correct.mni.27383/nu0.mnc...
+ 
+--------------------------------------------------------
+Iteration 1 Sat Mar 29 19:15:07 CDT 2014
+nu_correct -clobber ./tmp.mri_nu_correct.mni.27383/nu0.mnc ./tmp.mri_nu_correct.mni.27383/nu1.mnc -tmpdir ./tmp.mri_nu_correct.mni.27383/0/
+[HCPpipeline@node136:/HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451/T1w/198451/mri/] [2014-03-29 19:15:07] running:
+  /export/freesurfer-5.3-HCP/mni/bin/nu_estimate_np_and_em -parzen -log -sharpen 0.15 0.01 -iterations 50 -stop 0.001 -shrink 4 -auto_mask -nonotify -b_spline 1 -distance 200 -quiet -execute -clobber -nokeeptmp -tmpdir ./tmp.mri_nu_correct.mni.27383/0/ ./tmp.mri_nu_correct.mni.27383/nu0.mnc ./tmp.mri_nu_correct.mni.27383/nu1.imp
+
+Processing:.................................................................Done
+Processing:.................................................................Done
+Processing:.................................................................Done
+Processing:.................................................................Done
+Processing:.................................................................Done
+Processing:.................................................................Done
+Processing:.................................................................Done
+Processing:.................................................................Done
+Processing:.................................................................Done
+Processing:.................................................................Done
+Processing:.................................................................Done
+Processing:.................................................................Done
+Processing:.................................................................Done
+Processing:.................................................................Done
+Processing:.................................................................Done
+Processing:.................................................................Done
+Processing:.................................................................Done
+Processing:.................................................................Done
+Processing:.................................................................Done
+Number of iterations: 19 
+CV of field change: 0.000986031
+[HCPpipeline@node136:/HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451/T1w/198451/mri/] [2014-03-29 19:15:20] running:
+  /export/freesurfer-5.3-HCP/mni/bin/make_template -quiet -shrink 3 ./tmp.mri_nu_correct.mni.27383/nu0.mnc ./tmp.mri_nu_correct.mni.27383/0//template.mnc
+
+Transforming slices:......................................................................................Done
+Transforming slices:................................................................................................................................................................................................................................................................Done
+ 
+ 
+--------------------------------------------------------
+Iteration 2 Sat Mar 29 19:15:27 CDT 2014
+nu_correct -clobber ./tmp.mri_nu_correct.mni.27383/nu1.mnc ./tmp.mri_nu_correct.mni.27383/nu2.mnc -tmpdir ./tmp.mri_nu_correct.mni.27383/1/
+[HCPpipeline@node136:/HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451/T1w/198451/mri/] [2014-03-29 19:15:27] running:
+  /export/freesurfer-5.3-HCP/mni/bin/nu_estimate_np_and_em -parzen -log -sharpen 0.15 0.01 -iterations 50 -stop 0.001 -shrink 4 -auto_mask -nonotify -b_spline 1 -distance 200 -quiet -execute -clobber -nokeeptmp -tmpdir ./tmp.mri_nu_correct.mni.27383/1/ ./tmp.mri_nu_correct.mni.27383/nu1.mnc ./tmp.mri_nu_correct.mni.27383/nu2.imp
+
+Processing:.................................................................Done
+Processing:.................................................................Done
+Processing:.................................................................Done
+Processing:.................................................................Done
+Processing:.................................................................Done
+Processing:.................................................................Done
+Processing:.................................................................Done
+Processing:.................................................................Done
+Processing:.................................................................Done
+Processing:.................................................................Done
+Processing:.................................................................Done
+Processing:.................................................................Done
+Number of iterations: 12 
+CV of field change: 0.000960866
+[HCPpipeline@node136:/HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451/T1w/198451/mri/] [2014-03-29 19:15:35] running:
+  /export/freesurfer-5.3-HCP/mni/bin/make_template -quiet -shrink 3 ./tmp.mri_nu_correct.mni.27383/nu1.mnc ./tmp.mri_nu_correct.mni.27383/1//template.mnc
+
+Transforming slices:......................................................................................Done
+Transforming slices:................................................................................................................................................................................................................................................................Done
+ 
+ 
+ 
+mri_binarize --i ./tmp.mri_nu_correct.mni.27383/nu2.mnc --min -1 --o ./tmp.mri_nu_correct.mni.27383/ones.mgz
+
+$Id: mri_binarize.c,v 1.26.2.1 2011/04/08 15:40:50 greve Exp $
+cwd /HCP/hcpdb/build_ssd/chpc/BUILD/HCP_Staging/1396128475_198451/STRUCTURAL/198451/T1w/198451/mri
+cmdline mri_binarize --i ./tmp.mri_nu_correct.mni.27383/nu2.mnc --min -1 --o ./tmp.mri_nu_correct.mni.27383/ones.mgz 
+sysname  Linux
+hostname node136
+machine  x86_64
+user     HCPpipeline
+
+input      ./tmp.mri_nu_correct.mni.27383/nu2.mnc
+frame      0
+nErode3d   0
+nErode2d   0
+output     ./tmp.mri_nu_correct.mni.27383/ones.mgz
+Binarizing based on threshold
+min        -1
+max        +infinity
+binval        1
+binvalnot     0
+Found 16777216 values in range
+Counting number of voxels
+Found 16777216 voxels in final mask
+mri_binarize done
+mri_segstats --id 1 --seg ./tmp.mri_nu_correct.mni.27383/ones.mgz --i orig.mgz --sum ./tmp.mri_nu_correct.mni.27383/sum.junk --avgwf ./tmp.mri_nu_correct.mni.27383/input.mean.dat
+
+$Id: mri_segstats.c,v 1.75.2.9 2013/02/16 00:09:33 greve Exp $
+cwd 
+cmdline mri_segstats --id 1 --seg ./tmp.mri_nu_correct.mni.27383/ones.mgz --i orig.mgz --sum ./tmp.mri_nu_correct.mni.27383/sum.junk --avgwf ./tmp.mri_nu_correct.mni.27383/input.mean.dat 
+sysname  Linux
+hostname node136
+machine  x86_64
+user     HCPpipeline
+UseRobust  0
+Loading ./tmp.mri_nu_correct.mni.27383/ones.mgz
+Loading orig.mgz
+Voxel Volume is 1 mm^3
+Generating list of segmentation ids
+Found   1 segmentations
+Computing statistics for each segmentation
+  0     1                                     16777216  16777216.000
+
+Reporting on   1 segmentations
+Computing spatial average of each frame
+  0
+Writing to ./tmp.mri_nu_correct.mni.27383/input.mean.dat
+mri_segstats done
+mri_segstats --id 1 --seg ./tmp.mri_nu_correct.mni.27383/ones.mgz --i ./tmp.mri_nu_correct.mni.27383/nu2.mnc --sum ./tmp.mri_nu_correct.mni.27383/sum.junk --avgwf ./tmp.mri_nu_correct.mni.27383/output.mean.dat
+
+$Id: mri_segstats.c,v 1.75.2.9 2013/02/16 00:09:33 greve Exp $
+cwd 
+cmdline mri_segstats --id 1 --seg ./tmp.mri_nu_correct.mni.27383/ones.mgz --i ./tmp.mri_nu_correct.mni.27383/nu2.mnc --sum ./tmp.mri_nu_correct.mni.27383/sum.junk --avgwf ./tmp.mri_nu_correct.mni.27383/output.mean.dat 
+sysname  Linux
+hostname node136
+machine  x86_64
+user     HCPpipeline
+UseRobust  0
+Loading ./tmp.mri_nu_correct.mni.27383/ones.mgz
+Loading ./tmp.mri_nu_correct.mni.27383/nu2.mnc
+Voxel Volume is 1 mm^3
+Generating list of segmentation ids
+Found   1 segmentations
+Computing statistics for each segmentation
+  0     1                                     16777216  16777216.000
+
+Reporting on   1 segmentations
+Computing spatial average of each frame
+  0
+Writing to ./tmp.mri_nu_correct.mni.27383/output.mean.dat
+mri_segstats done
+mris_calc -o ./tmp.mri_nu_correct.mni.27383/nu2.mnc ./tmp.mri_nu_correct.mni.27383/nu2.mnc mul .97837428893047166425
+mri_convert ./tmp.mri_nu_correct.mni.27383/nu2.mnc nu.mgz --like orig.mgz
+mri_convert ./tmp.mri_nu_correct.mni.27383/nu2.mnc nu.mgz --like orig.mgz 
+$Id: mri_convert.c,v 1.179.2.7 2012/09/05 21:55:16 mreuter Exp $
+reading from ./tmp.mri_nu_correct.mni.27383/nu2.mnc...
+TR=0.00, TE=0.00, TI=0.00, flip angle=0.00
+i_ras = (-1, 0, 0)
+j_ras = (0, 0, -1)
+k_ras = (0, 1, 0)
+INFO: transform src into the like-volume: orig.mgz
+writing to nu.mgz...
+mri_make_uchar nu.mgz transforms/talairach.xfm nu.mgz
+type change took 0 minutes and 7 seconds.
+mapping (13, 169) to ( 3, 110)
+ 
+ 
+Sat Mar 29 19:16:19 CDT 2014
+mri_nu_correct.mni done
